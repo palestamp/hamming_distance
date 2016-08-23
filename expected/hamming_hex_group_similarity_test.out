@@ -1,0 +1,42 @@
+SELECT hamming_similarity('0000', '0000');
+ hamming_similarity 
+--------------------
+                 16
+(1 row)
+
+SELECT hamming_similarity('0000', 'ffff');
+ hamming_similarity 
+--------------------
+                  0
+(1 row)
+
+SELECT hamming_similarity('ffff', '0000');
+ hamming_similarity 
+--------------------
+                  0
+(1 row)
+
+SELECT hamming_similarity('1201', '0101');
+ hamming_similarity 
+--------------------
+                 13
+(1 row)
+
+SELECT hamming_similarity('01010101', '10101010');
+ hamming_similarity 
+--------------------
+                 24
+(1 row)
+
+SELECT hamming_similarity('010101010101010101010101010101010101010101010101', '101010101010101010101010101010101010101010101010');
+ hamming_similarity 
+--------------------
+                144
+(1 row)
+
+SELECT hamming_similarity('ffff', 'FFFF');
+ hamming_similarity 
+--------------------
+                 16
+(1 row)
+

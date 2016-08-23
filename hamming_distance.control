@@ -1,0 +1,5 @@
+# hamming_distance extension
+comment = 'find hamming distance sparsing hexdigested hash value over two char groups'
+default_version = '0.0.1'
+module_pathname = '$libdir/hamming_distance'
+relocatable = true

@@ -1,0 +1,42 @@
+SELECT hamming_distance_normalized('0000', '0000');
+ hamming_distance_normalized 
+-----------------------------
+                           0
+(1 row)
+
+SELECT hamming_distance_normalized('0000', 'ffff');
+ hamming_distance_normalized 
+-----------------------------
+                           1
+(1 row)
+
+SELECT hamming_distance_normalized('ffff', '0000');
+ hamming_distance_normalized 
+-----------------------------
+                           1
+(1 row)
+
+SELECT hamming_distance_normalized('1201', '0101');
+ hamming_distance_normalized 
+-----------------------------
+                      0.1875
+(1 row)
+
+SELECT hamming_distance_normalized('01010101', '10101010');
+ hamming_distance_normalized 
+-----------------------------
+                        0.25
+(1 row)
+
+SELECT hamming_distance_normalized('010101010101010101010101010101010101010101010101', '101010101010101010101010101010101010101010101010');
+ hamming_distance_normalized 
+-----------------------------
+                        0.25
+(1 row)
+
+SELECT hamming_distance_normalized('ffff', 'FFFF');
+ hamming_distance_normalized 
+-----------------------------
+                           0
+(1 row)
+
